@@ -16,10 +16,31 @@
 <body>
 
     <header>
+        <ul class="top-nav">
+            <li class="nav-info"><a href="#"></a></li>
+            <li class="nav-save"><a href="#"></a></li>
+        </ul>
         <img src="img/kiwifee_logo.svg">
         <h1>Kiwi Fee</h1>
         <p>The missing<br>Trade Me fee calculator</p>
     </header>
+
+<div class="calculator-container">
+    <form class="calculator-form">
+        <input type="number" id="input-cost-price">
+        <input type="number" id="input-sale-price">
+        <div>
+            <input type="radio" name="input-payment-method" value="cash">Cash
+            <input type="radio" name="input-payment-method" value="ping">Ping
+            <input type="radio" name="input-payment-method" value="afterpay">Afterpay
+        </div>
+        <div>
+            <input type="checkbox">I'm a top seller
+        </div>
+    </form>
+    <div class="results">I get <span>$</span></div>
+</div>
+
     <script src="js/script.js"></script>
 
 </body>
