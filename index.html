@@ -30,15 +30,33 @@
         <input type="number" id="input-cost-price">
         <input type="number" id="input-sale-price">
         <div>
-            <input type="radio" name="input-payment-method" value="cash">Cash
             <input type="radio" name="input-payment-method" value="ping">Ping
+            <input type="radio" name="input-payment-method" value="cash">Cash
             <input type="radio" name="input-payment-method" value="afterpay">Afterpay
         </div>
         <div>
             <input type="checkbox">I'm a top seller
         </div>
     </form>
-    <div class="results">I get <span>$</span></div>
+    <div class="results">
+        <div class="result-profit">
+            I get <span>$0.00</span>
+        </div>
+        <div class="result-fee-breakdown">
+            <div class="result-fee-tm">
+                Trade Me gets <span>$0.00</span>
+            </div>
+            <div class="result-fee-payment-method">
+                Ping fees are <span>$0.00</span>
+            </div>
+
+<!--            TODO: Only add this to the DOM if top seller is checked-->
+            <div class="result-fee-top-seller" style="display: none;">
+                Top seller savings of <span>$0.00</span>
+            </div>
+
+        </div>
+    </div>
 </div>
 
     <script src="js/script.js"></script>
