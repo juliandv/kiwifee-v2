@@ -16,29 +16,43 @@
 
 <body>
 
+<div class="container">
+
     <header>
-        <ul class="top-nav">
-            <li class="nav-info"><a href="#"></a></li>
-            <li class="nav-save"><a href="#"></a></li>
-        </ul>
+        <div class="top-nav">
+            <div class="nav-info"><a href="#">i</a></div>
+            <div class="nav-save"><a href="#">save</a></div>
+        </div>
         <img src="img/kiwifee_logo.svg">
         <h1>Kiwi Fee</h1>
         <p>The missing<br>Trade Me fee calculator</p>
     </header>
 
-<div class="calculator-container">
-    <form class="calculator-form">
-        <input type="number" id="input-cost-price">
-        <input type="number" id="input-sale-price">
-        <div>
-            <input type="radio" name="input-payment-method" value="ping">Ping
-            <input type="radio" name="input-payment-method" value="cash">Cash
-            <input type="radio" name="input-payment-method" value="afterpay">Afterpay
-        </div>
-        <div>
-            <input type="checkbox">I'm a top seller
-        </div>
-    </form>
+    <div class="main-content">
+        <form class="calculator-form">
+            <input type="number" id="input-cost-price">
+            <input type="number" id="input-sale-price">
+            <div class="even-col-desktop">
+                <div>
+                    <div class="option">
+                        <input type="radio" name="input-payment-method" value="ping" id="input-ping">
+                        <label for="input-ping">Ping</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="input-payment-method" value="cash" id="input-cash">
+                        <label for="input-cash">Cash</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="input-payment-method" value="afterpay" id="input-afterpay">
+                        <label for="input-afterpay">Afterpay</label>
+                    </div>
+                </div>
+                <div>
+                    <input type="checkbox">I'm a top seller
+                </div>
+            </div>
+        </form>
+    </div>
     <div class="results">
         <div class="result-profit">
             I get <span>$0.00</span>
