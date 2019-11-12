@@ -37,10 +37,12 @@ input {
 }
 */
 
-.option input {
+input[type="radio"],
+input[type="checkbox"] {
     display: none;
 }
-.option label {
+input[type="radio"] + label,
+input[type="checkbox"] + label {
     cursor: pointer;
     position: relative;
     padding: 10px 40px;
@@ -48,7 +50,44 @@ input {
     display: block;
 }
 
-.option label:after {
+
+/*Input checkbox icon*/
+
+input[type="checkbox"] + label:after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.05);
+    border: 2px solid #000000;
+    border-style: dotted;
+}
+
+input[type="checkbox"] + label:before {
+    opacity: 0;
+    content: url('../img/checkbox_check.svg');
+    position: absolute;
+    width: 27px;
+    height: 26px;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%) translateY(-5px);
+}
+
+input[type="checkbox"]:checked ~ label:after {
+    border-color: #ffffff;
+}
+
+input[type="checkbox"]:checked ~ label:before {
+    opacity: 1;
+}
+
+/*Input radio icon*/
+
+input[type="radio"] + label:after {
     content: '';
     position: absolute;
     width: 25px;
@@ -62,7 +101,7 @@ input {
     border-style: dotted;
 }
 
-.option label:before {
+input[type="radio"] + label:before {
     opacity: 0;
     content: '';
     position: absolute;
@@ -73,21 +112,23 @@ input {
     left: 8px;
     top: 50%;
     transform: translateY(-50%);
-
 }
 
-.option input:checked ~ label:after {
+input[type="radio"]:checked ~ label:after {
     border-color: #ffffff;
 }
 
-.option input:checked ~ label:before {
+input[type="radio"]:checked ~ label:before {
     opacity: 1;
 }
-
 
 @media (min-width: 1200px) {
     .even-col-desktop {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+    .flex-bottom-desktop {
+        display: flex;
+        align-items: flex-end;
+}
 }
