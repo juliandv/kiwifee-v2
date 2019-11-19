@@ -20,6 +20,11 @@ h1 {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 0 15px;
+    box-sizing: border-box;
 }
 
 header {
@@ -67,7 +72,36 @@ header .logo-branding img {
     width: 100%;
     max-width: 430px;
 }
-
+.result-profit {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    background: rgba(0,0,0,0.05);
+    border: 2px solid #000000;
+    border-style: dotted;
+    border-radius: 50px;
+}
+.result-fee-breakdown {
+    text-align: center;
+    font-size: 14px;
+    margin: 15px 0 15px 0
+}
+.result-fee-breakdown div {
+    display: inline-block;
+    font-weight: 400;
+    margin-right: 15px;
+}
+.result-fee-breakdown .result-fee-top-seller {
+    display: block;
+    margin-top: 8px;
+    visibility: hidden;
+}
+.results div span {
+    font-weight: 700;
+    color: #FFFE00;
+}
 /*
 input {
     display: block;
@@ -159,7 +193,7 @@ input[type="radio"]:checked ~ label:before {
     opacity: 1;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 800px) {
     .even-col-desktop {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
